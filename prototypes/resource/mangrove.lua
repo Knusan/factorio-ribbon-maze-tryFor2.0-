@@ -42,10 +42,10 @@ data:extend {{
     tree_removal_max_distance = 1,
     minable = {
         mining_time = 10,
-        results = {{type="item", name="green-wood"}},
+        results = {{type="item", name="green-wood", amount_min=1}},
         count = 1,
         mining_particle = "wooden-particle",
-        hardness = 0.5
+        hardness = 0.5        
     },
     stage_counts = {0},
     stages = {
@@ -84,7 +84,7 @@ data:extend {{
     tree_removal_max_distance = 1,
     minable = {
         mining_time = 10,
-        result = "wood",
+        result = {{type="item", name="wood", amount_min=1}},
         count = 1,
         mining_particle = "wooden-particle",
         hardness = 0.5
