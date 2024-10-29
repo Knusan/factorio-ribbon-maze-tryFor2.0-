@@ -23,12 +23,13 @@
 data:extend {{
     type = "resource",
     name = "mangrove-avicennia",
+   
     category = "mangrove",
     icon = "__base__/graphics/icons/tree-08.png",
     icon_size = 32,
     flags = {"placeable-neutral"},
     order="a-b-mangrove-avicennia",
-    collision_mask = {layers={item= true, resource=true}},
+    collision_mask = {layers={item= true}},
     collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
     emissions_per_second = {-0.0060},
