@@ -45,7 +45,7 @@ data:extend {{
         results = {{type="item", name="green-wood", amount_min=1, amount_max=1}},
         count = 1,
         mining_particle = "wooden-particle",
-        hardness = 0.5        
+        hardness = 0.5
     },
     stage_counts = {0},
     stages = {
