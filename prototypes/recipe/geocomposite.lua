@@ -34,6 +34,6 @@ data:extend {{
         {type ="item", name="refined-concrete", amount=1},
         {type="fluid", name="steam", amount=100, minimum_temperature=500}
     },
-    results={type="item",name="geocomposite", amount=1},
+    results={{type="item",name="geocomposite", amount=1}},
     order = "terraforming-geocomposite"
 }}
