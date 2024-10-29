@@ -22,7 +22,7 @@
 
 local function convertToMazeTile(mazeTile)
     mazeTile.map_color={r=0.1, g=0.1, b=0.1}
-
+    mazeTile.empty_transitions = true
     mazeTile.collision_mask = {layers= {item = true, water_tile= true, player=true, is_lower_obect= true, is_object=true}}
         -- "ground-tile",
         -- "water-tile",
@@ -32,7 +32,7 @@ local function convertToMazeTile(mazeTile)
         -- "object-layer",
         -- "player-layer",
         -- "doodad-layer"
-    
+    mazeTile.
 
     mazeTile.effect_color = {0.02, 0.02, 0.02}
 
