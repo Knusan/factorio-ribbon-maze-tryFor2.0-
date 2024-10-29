@@ -35,7 +35,7 @@ local mangroveHarvesterLayers = {
 
 mangroveHarvester.name = "mangrove-harvester"
 mangroveHarvester.minable = {mining_time = 1, result = "mangrove-harvester"}
-mangroveHarvester.collision_mask = {"object-layer" }
+mangroveHarvester.collision_mask = {layers={is_object = true}}
 mangroveHarvester.resource_categories = {"mangrove"}
 mangroveHarvester.energy_usage = "330kW"
 mangroveHarvester.mining_power = 2.5
