@@ -26,7 +26,7 @@ data:extend{
         name = "maze-terraforming-target",
         icon = "__base__/graphics/icons/wall.png",
         picture = {
-            filename = "__base__/graphics/entity/pipe/hr-pipe-cross.png",
+            filename = "__base__/graphics/entity/pipe/pipe-cross.png",
             priority = "extra-high",
             width = 1,
             height = 1,
