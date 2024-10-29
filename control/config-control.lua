@@ -48,11 +48,11 @@ function updateRibbonMazeConfig()
     --
     -- assign to global
     --
-    global.ribbonMazeConfig = config
+    settings.global["ribbonMazeConfig"] = config
     return config
 end
 
 -- Accessor function used throughout the mod:
 function ribbonMazeConfig()
-    return global.ribbonMazeConfig or updateRibbonMazeConfig()
+    return settings.global["ribbonMazeConfig"] or updateRibbonMazeConfig()
 end
