@@ -22,7 +22,7 @@
 
 local function convertToMazeTile(mazeTile)
     mazeTile.map_color={r=0.1, g=0.1, b=0.1}
-    mazeTile.empty_transitions = true
+    
     mazeTile.collision_mask = {layers= {item = true, water_tile= true, player=true, is_lower_obect= true, is_object=true}}
         -- "ground-tile",
         -- "water-tile",
@@ -38,6 +38,7 @@ local function convertToMazeTile(mazeTile)
 
     mazeTile.variants =
     {
+        
         main =
         {
             {
@@ -56,6 +57,7 @@ local function convertToMazeTile(mazeTile)
                 count = 4,
                 size = 4,
             },
+            empty_transitions = true
         },
 
 
@@ -63,17 +65,20 @@ local function convertToMazeTile(mazeTile)
         inner_corner =
         {
             picture = "__RibbonMaze018__/graphics/terrain/maze-inner-corner.png",
-            count = 6
+            count = 6,
+            empty_transitions = true
         },
         outer_corner =
         {
             picture = "__RibbonMaze018__/graphics/terrain/maze-outer-corner.png",
-            count = 6
+            count = 6,
+            empty_transitions = true
         },
         side =
         {
             picture = "__RibbonMaze018__/graphics/terrain/maze-side.png",
-            count = 8
+            count = 8,
+            empty_transitions = true
         }
     }
 end
