@@ -55,25 +55,18 @@ mangroveHarvester.radius_visualisation_picture =
 }
 
 mangroveHarvesterLayers[1].line_length = nil
-mangroveHarvesterLayers[1].hr_version.line_length = 0
 
 mangroveHarvesterLayers[1].frame_count = frame_count
-mangroveHarvesterLayers[1].hr_version.frame_count = frame_count
 
 mangroveHarvesterLayers[1].animation_speed = animation_speed
-mangroveHarvesterLayers[1].hr_version.animation_speed = animation_speed
 
 mangroveHarvesterLayers[1].run_mode = run_mode
-mangroveHarvesterLayers[1].hr_version.run_mode = run_mode
 
 mangroveHarvesterLayers[1].scale = scale * 2
-mangroveHarvesterLayers[1].hr_version.scale = scale
 
 mangroveHarvesterLayers[1].tint = tint
-mangroveHarvesterLayers[1].hr_version.tint = tint
 
 mangroveHarvesterLayers[1].shift = shift
-mangroveHarvesterLayers[1].hr_version.shift = shift
 
 mangroveHarvester.animations.north.layers = mangroveHarvesterLayers
 mangroveHarvester.animations.south.layers = mangroveHarvesterLayers
