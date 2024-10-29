@@ -32,7 +32,7 @@ data:extend{
             height = 1,
         },
         icon_size = 32,
-        collision_mask = {"object-layer"},
+        collision_mask = {layers={is_object = true}},
         collision_box = {{-0, -0}, {0, 0}},
         selection_box = {{-1, -1}, {2.9, 2.9}},
         shooting_cursor_size = 2,
