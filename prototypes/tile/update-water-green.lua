@@ -42,18 +42,18 @@
 --         main =
 --         {
 --             {
---                 picture = "__RibbonMaze018__/graphics/terrain/maze-floor1.png",
+--                 picture = "__RibbonMaze20__/graphics/terrain/maze-floor1.png",
 --                 count = 16,
 --                 size = 1
 --             },
 --             {
---                 picture = "__RibbonMaze018__/graphics/terrain/maze-floor2.png",
+--                 picture = "__RibbonMaze20__/graphics/terrain/maze-floor2.png",
 --                 count = 4,
 --                 size = 2
 
 --             },
 --             {
---                 picture = "__RibbonMaze018__/graphics/terrain/maze-floor4.png",
+--                 picture = "__RibbonMaze20__/graphics/terrain/maze-floor4.png",
 --                 count = 4,
 --                 size = 4,
 --             },
@@ -64,19 +64,19 @@
 
 --         inner_corner =
 --         {
---             picture = "__RibbonMaze018__/graphics/terrain/maze-inner-corner.png",
+--             picture = "__RibbonMaze20__/graphics/terrain/maze-inner-corner.png",
 --             count = 6,
 --             empty_transitions = true
 --         },
 --         outer_corner =
 --         {
---             picture = "__RibbonMaze018__/graphics/terrain/maze-outer-corner.png",
+--             picture = "__RibbonMaze20__/graphics/terrain/maze-outer-corner.png",
 --             count = 6,
 --             empty_transitions = true
 --         },
 --         side =
 --         {
---             picture = "__RibbonMaze018__/graphics/terrain/maze-side.png",
+--             picture = "__RibbonMaze20__/graphics/terrain/maze-side.png",
 --             count = 8,
 --             empty_transitions = true
 --         }

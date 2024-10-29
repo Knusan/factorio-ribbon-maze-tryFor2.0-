@@ -29,7 +29,7 @@ data:extend{{
             icon = "__base__/graphics/technology/tank.png",
         },
         {
-            icon = "__RibbonMaze018__/graphics/technology/mangrove-harvesting.png",
+            icon = "__RibbonMaze20__/graphics/technology/mangrove-harvesting.png",
         }
     },
     effects =
