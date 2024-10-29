@@ -55,7 +55,7 @@ mangroveHarvester.radius_visualisation_picture =
 }
 
 mangroveHarvesterLayers[1].line_length = nil
-mangroveHarvesterLayers[1].hr_version.line_length = nil
+mangroveHarvesterLayers[1].hr_version.line_length = 0
 
 mangroveHarvesterLayers[1].frame_count = frame_count
 mangroveHarvesterLayers[1].hr_version.frame_count = frame_count
