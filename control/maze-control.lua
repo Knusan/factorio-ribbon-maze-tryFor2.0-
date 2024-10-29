@@ -313,14 +313,14 @@ function ribbonMazeGenerateResources(config, modSurfaceInfo, surface, chunkPosit
         elseif resourceName == "water_" then
             -- do nothing
         else
-            local collisionBox = game.prototypes.entity[resourceName].collision_box
+            local collisionBox = game.entity_prototypes[resourceName].collision_box
             alignment = config.resourceAlignments[resourceName]
-            minimumAmount = game.prototypes.entity[resourceName].minimum_resource_amount or 100
+            minimumAmount = game.entity_prototypes[resourceName].minimum_resource_amount or 100
 
             if config.infiniteOres then
                 infiniteReplacement = config.infiniteOres[resourceName]
                 if infiniteReplacement then
-                    infiniteMinimumAmount = game.prototypes.entity[infiniteReplacement].minimum_resource_amount or 100
+                    infiniteMinimumAmount = game.entity_prototypes[infiniteReplacement].minimum_resource_amount or 100
                     local infiniteReplacementSize = math.floor(Maze.deadEnd(modSurfaceInfo.maze, mazePosition.x, mazePosition.y).yHighest / config.infiniteOreStretchFactor)
                     if infiniteReplacementSize < 1 then
                         infiniteReplacement = nil
@@ -398,7 +398,7 @@ function ribbonMazeGenerateResources(config, modSurfaceInfo, surface, chunkPosit
                                     local tileRandomAdjustment = Cmwc.randFractionRange(resource.rng, resource.minRand, 1.0)
                                     local amount = chunkRandomAdjustment * tileRandomAdjustment * resource.resourceAmount
                                     amount = amount * config.mixedResourcesMultiplier
-                                    minimumAmount = game.prototypes.entity[randomOre].minimum_resource_amount or 100
+                                    minimumAmount = game.entity_prototypes[randomOre].minimum_resource_amount or 100
                                     if amount < minimumAmount then
                                         amount = amount + minimumAmount
                                     end
