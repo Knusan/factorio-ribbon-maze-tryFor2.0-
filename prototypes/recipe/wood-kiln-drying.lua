@@ -27,9 +27,9 @@ data:extend {{
     energy_required = 7.0,
     enabled = false,
     ingredients = {
-        {"green-wood", 1}
+        {type="item", name="green-wood", amount=1}
     },
-    result= "wood",
+    results= {{type="item", name="wood", amount=1}},
     subgroup="raw-material",
     always_show_made_in = true,
     main_product = "",
