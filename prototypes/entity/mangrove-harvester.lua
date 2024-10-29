@@ -68,9 +68,4 @@ mangroveHarvesterLayers[1].tint = tint
 
 mangroveHarvesterLayers[1].shift = shift
 
-mangroveHarvester.animations.north.layers = mangroveHarvesterLayers
-mangroveHarvester.animations.south.layers = mangroveHarvesterLayers
-mangroveHarvester.animations.east.layers = mangroveHarvesterLayers
-mangroveHarvester.animations.west.layers = mangroveHarvesterLayers
-
 data:extend{mangroveHarvester}
