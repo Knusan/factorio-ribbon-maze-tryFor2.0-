@@ -37,7 +37,7 @@ end
 
 local function deadEndEnabled(settingsGlobal, resource)
 
-    local entityPrototype = prototype.entity[resource]
+    local entityPrototype = prototypes.entity[resource]
     if not entityPrototype then
         return false
     end
@@ -84,7 +84,7 @@ local function deadEndEnabled(settingsGlobal, resource)
 end
 
 local function guessAvoidStartingArea(resource)
-    local prototype = game.entity_prototypes[resource]
+    local prototype = gprototypes.entity[resource]
     if prototype and prototype.autoplace_specification and prototype.autoplace_specification.peaks then
         -- look for a peak that reduces the influence in the starting area (as done with uranium, and certain angel's ores):
         for _,v in ipairs(prototype.autoplace_specification.peaks) do
@@ -97,7 +97,7 @@ local function guessAvoidStartingArea(resource)
 end
 
 local function guessMixedOreStrength(resource)
-    local prototype = game.entity_prototypes[resource]
+    local prototype = prototypes.entity[resource]
 
     if guessAvoidStartingArea(resource) then
         return 0
@@ -199,7 +199,7 @@ resourceCorridorDepths["tenemut"] = {2,4,6,8,10}
 -- mad clown's ores (use automatic guessing)
 
 local function guessResourceCorridorDepths(resource)
-    local prototype = game.entity_prototypes[resource]
+    local prototype = prototypes.entity[resource]
     if prototype and prototype.infinite_resource then
         return {8,10}
     elseif guessAvoidStartingArea(resource) then
@@ -319,7 +319,7 @@ function createRibbonMazeConfig()
 
     local fish = {}
 
-    for name,prototype in pairs(game.entity_prototypes) do
+    for name,prototype in pairs(prototypes.entity) do
         if prototype.type=="fish" then
             table.insert(fish, name)
         end
