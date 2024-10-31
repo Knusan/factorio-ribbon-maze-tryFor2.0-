@@ -37,7 +37,7 @@ end
 
 local function deadEndEnabled(settingsGlobal, resource)
 
-    local entityPrototype = game.prototypes[resource]
+    local entityPrototype = game.entityPrototype[resource]
     if not entityPrototype then
         return false
     end
@@ -219,7 +219,7 @@ local function fitDivisor30(startSize)
 end
 
 local function resourceAlignment(resource)
-    local prototype = game.entity_prototypes[resource]
+    local prototype = prototypes.entity[resource]
     local collisionBox = prototype.collision_box
     local sizeX = math.ceil(collisionBox.right_bottom.x - collisionBox.left_top.x)
     local sizeY = math.ceil(collisionBox.right_bottom.y - collisionBox.left_top.y)
