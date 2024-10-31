@@ -461,6 +461,6 @@ function createRibbonMazeConfig()
         fishPerChunk = 10,
         fishList = fish,
     }
-    settings.global[ribbonMazeConfig] = config2
+    settings.global["ribbonMazeConfig"] = config2
     return config2
 end
