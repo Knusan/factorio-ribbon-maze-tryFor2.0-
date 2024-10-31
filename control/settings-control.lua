@@ -84,7 +84,7 @@ local function deadEndEnabled(settingsGlobal, resource)
 end
 
 local function guessAvoidStartingArea(resource)
-    local prototype = gprototypes.entity[resource]
+    local prototype = prototypes.entity[resource]
     if prototype and prototype.autoplace_specification and prototype.autoplace_specification.peaks then
         -- look for a peak that reduces the influence in the starting area (as done with uranium, and certain angel's ores):
         for _,v in ipairs(prototype.autoplace_specification.peaks) do
