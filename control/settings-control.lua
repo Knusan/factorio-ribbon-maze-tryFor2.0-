@@ -37,7 +37,7 @@ end
 
 local function deadEndEnabled(settingsGlobal, resource)
 
-    local entityPrototype = game.entityPrototype[resource]
+    local entityPrototype = prototype.entity[resource]
     if not entityPrototype then
         return false
     end
