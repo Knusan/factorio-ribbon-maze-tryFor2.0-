@@ -48,7 +48,7 @@ function updateRibbonMazeConfig()
     --
     -- assign to global
     --
-    settings.global["ribbonMazeConfig"] = config
+    settings.global["ribbonMazeConfig"] = {config}
     return config
 end
 
