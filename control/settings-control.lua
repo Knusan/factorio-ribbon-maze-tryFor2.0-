@@ -389,7 +389,7 @@ function createRibbonMazeConfig()
         end
     end
 
-    return {
+    local config2 = {
         -- True if terraforming prototypes are available, in which case entities and forces will be created to allow
         -- automated terraforming with artillery
         terraformingPrototypesEnabled = true,
@@ -461,4 +461,6 @@ function createRibbonMazeConfig()
         fishPerChunk = 10,
         fishList = fish,
     }
+    settings.global[ribbonMazeConfig] = config2
+    return config2
 end
