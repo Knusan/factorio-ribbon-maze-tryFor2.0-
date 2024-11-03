@@ -29,8 +29,8 @@ data:extend {{
     always_show_made_in = true,
     ingredients =
     {
-        {"composting-greens", 150},
-        {"composting-browns", 100}
+        {type="item", name="composting-greens", amount=150},
+        {type="item", name="composting-browns", amount=100},
     },
     results = {
         {type="item", name="compost", amount=200},
@@ -38,7 +38,7 @@ data:extend {{
     },
     subgroup = "intermediate-product",
     icons = {{
-        icon = "__RibbonMaze018__/graphics/icons/compost.png",
+        icon = "__RibbonMaze20__/graphics/icons/compost.png",
         icon_size = 32,
     }},
     crafting_machine_tint =

@@ -35,5 +35,5 @@ data:extend{{
         {type="item", name="storage-tank", amount=1},
         {type="fluid", name="steam", amount=25000},
     },
-    result = "maze-terraforming-artillery-shell"
+    results = {{type="item", name="maze-terraforming-artillery-shell", amount=1}},
 }}

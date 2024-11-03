@@ -207,5 +207,17 @@ data:extend{
         default_value = 3,
         order="rb-v-c-m",
     },
+    {
+        type = "string-setting",
+        name = "ribbonMazeConfig",
+        setting_type = "startup",
+        default_value = "{}"
+    },
+    -- {
+    --     type = "string-setting",
+    --     name = "modSurfaceInfo",
+    --     setting_type = "runtime-global",
+    --     default_value = "{}"
+    -- }
 }
 

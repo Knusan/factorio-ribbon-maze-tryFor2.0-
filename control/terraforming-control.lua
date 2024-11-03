@@ -26,6 +26,7 @@
 -- 111111
 -- 011110
 -- 001100
+storage = storage
 
 local circleTemplate = {{0, -2}, {0, 3}, {1, -2}, {1, 3}, {-2, 0}, {3, 0}, {-2, 1}, {3, 1}}
 for tileX = -1,2 do
@@ -79,7 +80,7 @@ function mazeTerraformingResultHandler(event)
 
             surface.set_tiles(updatedTiles)
 
-            local modSurfaceInfo = global.modSurfaceInfo[surface.name]
+            local modSurfaceInfo = storage.modSurfaceInfo[surface.name]
             for _, templatePos in pairs(circleTemplate) do
                 local tileX = position.x+templatePos[1]
                 local tileY = position.y+templatePos[2]
@@ -109,7 +110,7 @@ function mazeTerraformingResultHandler(event)
 end
 
 function mazeTerraformingArtillerybuiltHandler(event)
-    local entity = event.created_entity
+    local entity = event.entity
 
     if entity.name == "maze-terraforming-artillery-turret" or entity.name == "maze-terraforming-artillery-wagon" then
         entity.force = "maze-terraforming-artillery"

@@ -29,11 +29,11 @@ data:extend {{
     always_show_made_in = true,
     ingredients =
     {
-        {"wood", 2},
-        {"plastic-bar", 2},
-        {"refined-concrete", 1},
+        {type ="item", name="wood", amount=2},
+        {type ="item", name="plastic-bar", amount=2},
+        {type ="item", name="refined-concrete", amount=1},
         {type="fluid", name="steam", amount=100, minimum_temperature=500}
     },
-    result= "geocomposite",
+    results={{type="item",name="geocomposite", amount=1}},
     order = "terraforming-geocomposite"
 }}

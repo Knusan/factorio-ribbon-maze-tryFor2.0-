@@ -29,7 +29,7 @@ data:extend {
         always_show_made_in = true,
         ingredients =
         {
-            {"wood", 10},
+            {type="item", name="wood", amount=10},
         },
         results = {
             {type="item", name="composting-greens", amount=1},
@@ -43,7 +43,7 @@ data:extend {
                 icon_size = 32,
             },
             {
-                icon = "__RibbonMaze018__/graphics/icons/compost-shredding.png",
+                icon = "__RibbonMaze20__/graphics/icons/compost-shredding.png",
                 icon_size = 32,
             },
         },
@@ -58,7 +58,7 @@ data:extend {
         always_show_made_in = true,
         ingredients =
         {
-            {"green-wood", 10},
+            {type="item", name="green-wood", amount=10},
         },
         results = {
             {type="item", name="composting-greens", amount=9},
@@ -73,7 +73,7 @@ data:extend {
                 tint = {r=0.41, g=0.8, b=0.41, a=1.0},
             },
             {
-                icon = "__RibbonMaze018__/graphics/icons/compost-shredding.png",
+                icon = "__RibbonMaze20__/graphics/icons/compost-shredding.png",
                 icon_size = 32,
             },
         },
@@ -88,7 +88,7 @@ data:extend {
         always_show_made_in = true,
         ingredients =
         {
-            {"wood", 2},
+            {type="item", name="wood", amount=2},
         },
         results = {
             {type="item", name="composting-browns", amount=1}
@@ -101,7 +101,7 @@ data:extend {
                 icon_size = 32,
             },
             {
-                icon = "__RibbonMaze018__/graphics/icons/compost-shredding.png",
+                icon = "__RibbonMaze20__/graphics/icons/compost-shredding.png",
                 icon_size = 32,
             },
         },
@@ -116,7 +116,7 @@ data:extend {
         always_show_made_in = true,
         ingredients =
         {
-            {"wooden-chest", 2},
+            {type="item", name="wooden-chest", amount=2},
         },
         results = {
             {type="item", name="composting-browns", amount=1}
@@ -129,7 +129,7 @@ data:extend {
                 icon_size = 32,
             },
             {
-                icon = "__RibbonMaze018__/graphics/icons/compost-shredding.png",
+                icon = "__RibbonMaze20__/graphics/icons/compost-shredding.png",
                 icon_size = 32,
             },
         },
@@ -144,7 +144,7 @@ data:extend {
         always_show_made_in = true,
         ingredients =
         {
-            {"small-electric-pole", 2},
+            {type="item", name="small-electric-pole", amount=2},
         },
         results = {
             {type="item", name="composting-browns", amount=1}
@@ -157,7 +157,7 @@ data:extend {
                 icon_size = 32,
             },
             {
-                icon = "__RibbonMaze018__/graphics/icons/compost-shredding.png",
+                icon = "__RibbonMaze20__/graphics/icons/compost-shredding.png",
                 icon_size = 32,
             },
         },
@@ -172,7 +172,7 @@ data:extend {
         always_show_made_in = true,
         ingredients =
         {
-            {"raw-fish", 1},
+            {type="item", name="raw-fish", amount=1},
         },
         results = {
             {type="item", name="composting-greens", amount=1},
@@ -185,7 +185,7 @@ data:extend {
                 icon_size = 32,
             },
             {
-                icon = "__RibbonMaze018__/graphics/icons/compost-shredding.png",
+                icon = "__RibbonMaze20__/graphics/icons/compost-shredding.png",
                 icon_size = 32,
             },
         },

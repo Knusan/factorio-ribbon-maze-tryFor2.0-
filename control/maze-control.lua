@@ -24,6 +24,8 @@
 require("lib.cmwc")
 require("lib.maze")
 
+storage=storage
+
 function calculateMazePosition(config, modSurfaceInfo, coordinates)
 
     local topX
@@ -313,14 +315,14 @@ function ribbonMazeGenerateResources(config, modSurfaceInfo, surface, chunkPosit
         elseif resourceName == "water_" then
             -- do nothing
         else
-            local collisionBox = game.entity_prototypes[resourceName].collision_box
+            local collisionBox = prototypes.entity[resourceName].collision_box
             alignment = config.resourceAlignments[resourceName]
-            minimumAmount = game.entity_prototypes[resourceName].minimum_resource_amount or 100
+            minimumAmount = prototypes.entity[resourceName].minimum_resource_amount or 100
 
             if config.infiniteOres then
                 infiniteReplacement = config.infiniteOres[resourceName]
                 if infiniteReplacement then
-                    infiniteMinimumAmount = game.entity_prototypes[infiniteReplacement].minimum_resource_amount or 100
+                    infiniteMinimumAmount = prototypes.entity[infiniteReplacement].minimum_resource_amount or 100
                     local infiniteReplacementSize = math.floor(Maze.deadEnd(modSurfaceInfo.maze, mazePosition.x, mazePosition.y).yHighest / config.infiniteOreStretchFactor)
                     if infiniteReplacementSize < 1 then
                         infiniteReplacement = nil
@@ -398,7 +400,7 @@ function ribbonMazeGenerateResources(config, modSurfaceInfo, surface, chunkPosit
                                     local tileRandomAdjustment = Cmwc.randFractionRange(resource.rng, resource.minRand, 1.0)
                                     local amount = chunkRandomAdjustment * tileRandomAdjustment * resource.resourceAmount
                                     amount = amount * config.mixedResourcesMultiplier
-                                    minimumAmount = game.entity_prototypes[randomOre].minimum_resource_amount or 100
+                                    minimumAmount = prototypes.entity[randomOre].minimum_resource_amount or 100
                                     if amount < minimumAmount then
                                         amount = amount + minimumAmount
                                     end
@@ -511,7 +513,7 @@ function ribbonMazeChunkGeneratedEventHandler(event)
     local config = ribbonMazeConfig()
 
     local surface = event.surface
-    local modSurfaceInfo = global.modSurfaceInfo[surface.name]
+    local modSurfaceInfo = storage.modSurfaceInfo[surface.name]
     -- if modSurfaceInfo is absent, this isn't a surface we are managing
     if not modSurfaceInfo then
         return
@@ -615,7 +617,7 @@ function ribbonMazePlayerCreatedEventHander(event)
 
     local player = game.players[event.player_index]
     local surface = player.surface
-    local modSurfaceInfo = global.modSurfaceInfo[surface.name]
+    local modSurfaceInfo = storage.modSurfaceInfo[surface.name]
     -- if modSurfaceInfo is absent, this isn't a surface we are managing
     if not modSurfaceInfo then
         return
@@ -655,7 +657,7 @@ local function resourceScanning(research, resourceName)
     for _,surfaceName in pairs(config.modSurfaces) do
         local surface = game.surfaces[surfaceName]
         if surface then
-            local modSurfaceInfo = global.modSurfaceInfo[surfaceName]
+            local modSurfaceInfo = storage.modSurfaceInfo[surfaceName]
             if modSurfaceInfo then
                 for findY = 1, maxY, 2 do
                     for findX = 1, modSurfaceInfo.maze.numColumns, 2 do
@@ -706,7 +708,7 @@ function regenerateMaze(commandInfo)
     local config = ribbonMazeConfig()
     local playerForces = findPlayerForces()
     for _, surfaceName in pairs(config.modSurfaces) do
-        local modSurfaceInfo = global.modSurfaceInfo[surfaceName]
+        local modSurfaceInfo = storage.modSurfaceInfo[surfaceName]
         local surface = game.surfaces[surfaceName]
         modSurfaceInfo.masterRng = Cmwc.withSeed(Cmwc.randUint32(modSurfaceInfo.masterRng) + surface.map_gen_settings.seed)
         modSurfaceInfo.terraformingMangroveRng = Cmwc.deriveNew(modSurfaceInfo.masterRng)
@@ -763,7 +765,14 @@ end
 
 function ribbonMazeInitHandler()
 
-    local config = ribbonMazeConfig()
+    local config = storage["ribbonMazeConfig"]
+    if(not config) then 
+        config = ribbonMazeConfig()
+    end
+
+    if not config then
+        error('createRibbonMazeConfig() returned nil')
+    end
 
     if config.terraformingPrototypesEnabled then
         local maze_terraforming_targets_exists = false
@@ -795,8 +804,6 @@ function ribbonMazeInitHandler()
         end
     end
 
-    global.modSurfaceInfo = global.modSurfaceInfo or {}
-    for _, v in pairs(config.modSurfaces) do
-        global.modSurfaceInfo[v] = global.modSurfaceInfo[v] or {}
-    end
+    storage.modSurfaceInfo = storage.modSurfaceInfo or {}
+    storage.modSurfaceInfo[config.modSurfaces[1]] = {}
 end
